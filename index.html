@@ -1,0 +1,156 @@
+echo "# L0-to-L1" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/umarrajputtt188-coder/L0-to-L1.git
+git push -u origin maingit remote add origin https://github.com/umarrajputtt188-coder/L0-to-L1.git
+git branch -M main
+git push -u origin main
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L0 to L1 Website</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #0b1020;
+    color: white;
+}
+
+header {
+    background: #151d35;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #00d9ff;
+}
+
+header h1 {
+    color: #00d9ff;
+}
+
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 25px;
+    background: #151d35;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #00d9ff33;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border: 1px solid #00d9ff;
+    border-radius: 8px;
+    background: #0b1020;
+    color: white;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #00d9ff;
+    color: #0b1020;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #00aacc;
+}
+
+#dashboard {
+    display: none;
+    text-align: center;
+}
+
+.status {
+    margin: 20px 0;
+    padding: 20px;
+    background: #202c4b;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #888;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>L0 TO L1</h1>
+    <p>Welcome to L0 to L1 Platform</p>
+</header>
+
+<div class="container" id="login">
+    <h2>Login Account</h2>
+
+    <input type="text" id="username"
+    placeholder="Enter Username">
+
+    <input type="password" id="password"
+    placeholder="Enter Password">
+
+    <button onclick="loginUser()">Login</button>
+</div>
+
+<div class="container" id="dashboard">
+    <h2>Dashboard</h2>
+
+    <div class="status">
+        <h3>Welcome!</h3>
+        <p>Your account is active on this demo page.</p>
+    </div>
+
+    <button onclick="logoutUser()">Logout</button>
+</div>
+
+<footer>
+    © 2026 L0 to L1. All Rights Reserved.
+</footer>
+
+<script>
+function loginUser() {
+    let user = document.getElementById("username").value;
+    let pass = document.getElementById("password").value;
+
+    if(user.trim() !== "" && pass.trim() !== "") {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("dashboard").style.display = "block";
+    } else {
+        alert("Please enter username and password");
+    }
+}
+
+function logoutUser() {
+    document.getElementById("dashboard").style.display = "none";
+    document.getElementById("login").style.display = "block";
+}
+</script>
+
+</body>
+</html>
